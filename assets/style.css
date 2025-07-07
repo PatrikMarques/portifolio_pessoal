@@ -136,3 +136,48 @@ footer {
     font-size: 16px;
   }
 }
+
+/* Formulário de Contato */
+.formulario-contato {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  text-align: left;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.formulario-contato label {
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.formulario-contato input,
+.formulario-contato textarea {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  width: 100%;
+}
+
+.formulario-contato button {
+  padding: 10px;
+  background-color: #00ffc8;
+  color: #000;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.formulario-contato button:hover {
+  background-color: #00ccaa;
+}
+
+/* Para alinhar texto à esquerda nas outras páginas */
+.overlay.alinhado-esquerda {
+  text-align: left;
+}

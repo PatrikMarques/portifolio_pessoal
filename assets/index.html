@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portfólio - Sobre Mim</title>
-  <link rel="stylesheet" href="/style.css" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <div class="container">
@@ -18,7 +18,7 @@
     </nav>
 
     <main class="conteudo">
-      <div class="overlay">
+      <div class="overlay alinhado-esquerda">
         <h2>Olá! Eu sou Patrik Marques</h2>
         <p>
           Sou um estudante apaixonado por programação, atualmente me especializando em desenvolvimento web. 
@@ -32,6 +32,23 @@
   <footer>
     <p>© 2025 - Desenvolvido por Patrik Marques</p>
   </footer>
+  <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const overlay = document.querySelector('.overlay');
+    if (overlay) {
+      overlay.style.opacity = 0;
+      overlay.style.transform = "translateY(30px)";
+      overlay.style.transition = "opacity 0.8s ease, transform 0.8s ease";
+
+      // Delay para ativar suavemente após o carregamento
+      setTimeout(() => {
+        overlay.style.opacity = 1;
+        overlay.style.transform = "translateY(0)";
+      }, 100);
+    }
+  });
+</script>
+
 </body>
 </html>
 

@@ -5,39 +5,58 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contato</title>
-  <link rel="stylesheet" href="assets/style.css" />
-
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
-    <h1>Entre em Contato</h1>
-  </header>
-  
-<nav>
-  <a href="index.html">Sobre Mim</a>
-  <a href="formacao.html">Formação</a>
-  <a href="portfolio.html">Portfólio</a>
-  <a href="contato.html">Contato</a>
-</nav>
+  <div class="container">
+    <nav class="sidebar">
+      <ul>
+        <li><a href="index.html">Sobre Mim</a></li>
+        <li><a href="formacao.html">Formação</a></li>
+        <li><a href="portfolio.html">Portfólio</a></li>
+        <li><a href="contato.html">Contato</a></li>
+      </ul>
+    </nav>
 
-  <main>
-    <form>
-      <label for="nome">Nome:</label>
-      <input type="text" id="nome" placeholder="Digite seu nome" required>
+    <main class="conteudo">
+    <div class="overlay alinhado-esquerda">
+        <h2>Entre em Contato</h2>
+        <form class="formulario-contato">
+          <label for="nome">Nome:</label>
+          <input type="text" id="nome" placeholder="Digite seu nome" required>
 
-      <label for="email">E-mail:</label>
-      <input type="email" id="email" placeholder="Digite seu e-mail" required>
+          <label for="email">E-mail:</label>
+          <input type="email" id="email" placeholder="Digite seu e-mail" required>
 
-      <label for="mensagem">Mensagem:</label>
-      <textarea id="mensagem" rows="5" placeholder="Digite sua mensagem" required></textarea>
+          <label for="mensagem">Mensagem:</label>
+          <textarea id="mensagem" rows="5" placeholder="Digite sua mensagem" required></textarea>
 
-      <button type="submit">Enviar</button>
-    </form>
-  </main>
-  
-<footer>
-  <p>© 2025 - Desenvolvido por Patrik Marques</p>
-</footer>
+          <button type="submit">Enviar</button>
+        </form>
+      </div>
+
+    </main>
+  </div>
+
+  <footer>
+    <p>© 2025 - Desenvolvido por Patrik Marques</p>
+  </footer>
+  <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const overlay = document.querySelector('.overlay');
+    if (overlay) {
+      overlay.style.opacity = 0;
+      overlay.style.transform = "translateY(30px)";
+      overlay.style.transition = "opacity 0.8s ease, transform 0.8s ease";
+
+      // Delay para ativar suavemente após o carregamento
+      setTimeout(() => {
+        overlay.style.opacity = 1;
+        overlay.style.transform = "translateY(0)";
+      }, 100);
+    }
+  });
+</script>
 
 </body>
 </html>

@@ -5,33 +5,51 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portfólio</title>
-  <link rel="stylesheet" href="assets/style.css" />
-
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
-    <h1>Meu Portfólio</h1>
-  </header>
-  
-<nav>
-  <a href="index.html">Sobre Mim</a>
-  <a href="formacao.html">Formação</a>
-  <a href="portfolio.html">Portfólio</a>
-  <a href="contato.html">Contato</a>
-</nav>
+  <div class="container">
+    <nav class="sidebar">
+      <ul>
+        <li><a href="index.html">Sobre Mim</a></li>
+        <li><a href="formacao.html">Formação</a></li>
+        <li><a href="portfolio.html">Portfólio</a></li>
+        <li><a href="contato.html">Contato</a></li>
+      </ul>
+    </nav>
 
-  <main>
-    <h2>Projetos em Destaque</h2>
-    <ul>
-      <li><a href="#">Calculadora de IMC</a> - Projeto com HTML, CSS e JavaScript</li>
-      <li><a href="#">Sistema de Cadastro</a> - Interface simples de formulário</li>
-      <li><a href="#">Site de Viagens</a> - Página responsiva com destinos turísticos</li>
-    </ul>
-  </main>
-  
-<footer>
-  <p>© 2025 - Desenvolvido por Patrik Marques</p>
-</footer>
+    <main class="conteudo">
+      <div class="overlay">
+        <h2>Projetos em Destaque</h2>
+        <ul>
+          <li><a href="https://calculadoraimc-tau.vercel.app/">Calculadora de IMC</a> - Projeto com HTML, CSS e JavaScript</li>
+          <li><a href="#">Sistema de Cadastro</a> - Interface simples de formulário</li>
+          <li><a href="#">Site de Viagens</a> - Página responsiva com destinos turísticos</li>
+        </ul>
+      </div>
+    </main>
+  </div>
+
+  <footer>
+    <p>© 2025 - Desenvolvido por Patrik Marques</p>
+  </footer>
+  <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const overlay = document.querySelector('.overlay');
+    if (overlay) {
+      overlay.style.opacity = 0;
+      overlay.style.transform = "translateY(30px)";
+      overlay.style.transition = "opacity 1.5s ease, transform 1.5s ease";
+
+      // Delay para ativar suavemente após o carregamento
+      setTimeout(() => {
+        overlay.style.opacity = 1;
+        overlay.style.transform = "translateY(0)";
+      }, 100);
+    }
+  });
+</script>
 
 </body>
 </html>
+
